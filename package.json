@@ -1,0 +1,24 @@
+{
+  "name": "inscryption-wiki-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only MCP server and resumable exporter for the Inscryption Fandom wiki",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "export:wiki": "node scripts/export.js",
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/api/mediawiki-client.js && node --check src/services/wiki-service.js && node --check src/services/export-service.js && node --check src/mcp/register-tools.js && node --check scripts/export.js && node --check src/services/media-download-service.js && node --check scripts/download-media.js",
+    "download:media": "node scripts/download-media.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.1.12"
+  },
+  "packageManager": "pnpm@12.18.0",
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "inscryption-wiki": {
+      "command": "node",
+      "args": ["C:/PATH/TO/inscryption-wiki-mcp/src/index.js"],
+      "env": {
+        "WIKI_BASE_URL": "https://inscryption.fandom.com",
+        "WIKI_EXPORT_DIR": "C:/PATH/TO/inscryption-wiki-mcp/data/inscryption-wiki"
+      }
+    }
+  }
+}
